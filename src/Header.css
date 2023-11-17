@@ -1,0 +1,64 @@
+:root {
+    --contact-button-width: 40px;
+    --contact-button-height: 40px;
+}
+
+.Header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#logo {
+    margin-top: 10px;
+    width: 100px;
+}
+
+#navigation-bar {
+    display: flex;
+    list-style-type: none;
+}
+
+#navigation-bar li {
+    padding: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: var(--default-font);
+    font-size: 18px;
+}
+
+#contact-navigation {
+    display: flex;
+}
+
+#contact-navigation img {
+    width: var(--contact-button-width);
+    height: var(--contact-button-height);
+}
+
+#search-form {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+#search-form > input[type=text] {
+    margin-right: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    font-family: var(--default-font);
+    font-size: 18px;
+    transition: 0.5s;
+}
+
+#search-form > input[type=text]:focus {
+    padding-right: 20vw;
+}
+
+#search-form > input[type=image] {
+    width: 20px;
+    height: 20px;
+}
+

@@ -1,0 +1,36 @@
+.CarouselItem {
+    display: flex;
+    width: 50vw;
+    background-color: var(--color-yellow);
+}
+
+.carousel-image {
+    width: 30vw;
+    height: 500px;
+    object-fit: cover;
+}
+
+.carousel-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 20px;
+}
+
+.carousel-info h1 {
+    font-family: var(--default-font);
+    margin: 0px;
+}
+
+.carousel-info p {
+    font-family: var(--default-font);
+}
+
+.carousel-tag {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.carousel-tag li {
+    margin-right: 40px;
+}
