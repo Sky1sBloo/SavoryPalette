@@ -1,16 +1,16 @@
 import './App.css';
 import Header from './Header.jsx';
-import CarouselItem from './main/CarouselItem.jsx';
-import RecipeInfo from './main/RecipeInfo.jsx';
+import LandingCarousel from './main/LandingCarousel.jsx';
 
-function App() {
-  let testItem = new RecipeInfo('Omelette', 'I like omelette', ['Breakfast', 'Fast'], '10m', 'Easy');
+
+const App = () => {
+  
   return (
     <div className="App">
       <Header />
       <hr />
       <main>
-        <CarouselItem info={testItem}/>
+        <LandingCarousel />
       </main>
     </div>
   );
