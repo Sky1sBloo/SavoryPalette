@@ -6,3 +6,12 @@
     --color-gray: #7F7F7F;
     --default-font: 'Georgia';
 }
+
+h1 {
+    font-family: var(--default-font);
+    margin: 0px;
+}
+
+p {
+    font-family: var(--default-font);
+}

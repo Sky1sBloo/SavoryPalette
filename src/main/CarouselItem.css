@@ -1,3 +1,5 @@
+
+
 .CarouselItem {
     display: flex;
     width: 50vw;
@@ -13,17 +15,11 @@
 .carousel-info {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     margin-left: 20px;
-}
-
-.carousel-info h1 {
-    font-family: var(--default-font);
-    margin: 0px;
-}
-
-.carousel-info p {
-    font-family: var(--default-font);
+    margin-right: 20px;
+    margin-top: 150px;
+    width: 100%;
 }
 
 .carousel-tag {
@@ -33,4 +29,21 @@
 
 .carousel-tag li {
     margin-right: 40px;
+}
+
+.carousel-time-difficulty {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.carousel-time {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.carousel-time img{
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
 }
