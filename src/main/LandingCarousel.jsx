@@ -3,6 +3,7 @@ import useEffectDelay from '../useEffectDelay.js';
 import './LandingCarousel.css';
 import '../colors-and-fonts.css';
 import CarouselItem from "./CarouselItem.jsx";
+import SlideButtonImage from "../images/carouselbutton.jpg";
 
 /**
  * The main recommendation carousel on the landing page
@@ -27,6 +28,20 @@ const LandingCarousel = (props) => {
         setSlide(slide === 0 ? props.data.length - 1 : slide - 1);
     }
 
+    /**
+     * Handles all slide button input
+     * @param {*} e Event
+     * @param {*} isNext 
+     */
+    const handleSlideButton = (event, isNext) => {
+        event.preventDefault();
+        if (isNext) {
+            nextSlide();
+        } else {
+            prevSlide();
+        }
+    }
+
     useEffectDelay(nextSlide, slideInterval);
     
     return (
@@ -36,6 +51,10 @@ const LandingCarousel = (props) => {
                     <CarouselItem info={item} />
                 </div>
             )}
+            <form className="slide-btns">
+                <input className="slide-btn left" type="image" src={SlideButtonImage} onClick={event => handleSlideButton(event, false)}/>
+                <input className="slide-btn right" type="image" src={SlideButtonImage} onClick={event => handleSlideButton(event, true)}/>
+            </form>
             <div className="carousel-buttons">
                 <ul>
                     {props.data.map((item, idx)=>

@@ -10,7 +10,6 @@ import ClockImage from '../images/clock.png';
  */
 const CarouselItem = (props) => {
     const tagItems = props.info.tags.map((tagName, idx) => <li key={idx}>{tagName}</li>);
-    console.log(props.info.cardColor);
     
     return (
         <div className="CarouselItem" style={{backgroundColor: props.info.cardColor}}>
