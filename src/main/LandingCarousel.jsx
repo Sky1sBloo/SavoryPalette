@@ -1,19 +1,30 @@
+import {useState} from 'react';
 import './LandingCarousel.css';
-import '../colors-and-fonts.css'
-import CarouselItem from "./CarouselItem";
-import RecipeInfo from './RecipeInfo.jsx';
+import '../colors-and-fonts.css';
+import CarouselItem from "./CarouselItem.jsx";
 
 const LandingCarousel = (props) => {
-    let testItem = new RecipeInfo('Omelette', 'I like omelette', ['Breakfast', 'Fast'], '10m', 'Easy');
+    const [slide, setSlide] = useState(0);
 
+    const nextSlide = () => {
+        setSlide(slide === props.data.length - 1 ? 0 : slide + 1);
+    }
+
+    const prevSlide = () => {
+        setSlide(slide === 0 ? props.data.length - 1 : slide - 1);
+    }
+
+    //let currentItem = new Array(React.Children.count).map(()=><li> <button className="carousel-selector" type="button" /> </li>);
+    
     return (
         <div className="LandingCarousel">
-            <CarouselItem info={testItem} />
+            {props.data.map((item, length) => 
+                <CarouselItem info={item} />
+            )}
             <div className="carousel-buttons">
-                <form>
-                    <input className="carousel-selector" type="button" />
-                    <input className="carousel-selector" type="button" />
-                </form>
+                <ul>
+                    
+                </ul>
             </div>
         </div>
     );

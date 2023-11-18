@@ -1,0 +1,18 @@
+{
+    "CarouselItems": [
+        {
+            "title":"Omelette", 
+            "description": "like omelette", 
+            "tags": ["Breakfast", "Fast"], 
+            "time": "10m",
+            "difficulty": "Easy"
+        },
+        {
+            "title":"Omelette", 
+            "description": "like omelette", 
+            "tags": ["Breakfast", "Fast"], 
+            "time": "10m",
+            "difficulty": "Easy"
+        }
+    ]
+}

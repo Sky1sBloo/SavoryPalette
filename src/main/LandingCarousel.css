@@ -14,3 +14,8 @@
     width: 15px;
     height: 15px;
 }
+
+.carousel-buttons ul {
+    display: flex;
+    list-style-type: none;
+}
