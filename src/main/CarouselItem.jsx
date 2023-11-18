@@ -3,7 +3,7 @@ import '../colors-and-fonts.css';
 import ClockImage from '../images/clock.png';
 
 /**
- * 
+ * A Carousel display representing the recipes
  * @param {*} props
  * @param {ItemInfo} props.info
  * @returns 

@@ -1,26 +1,33 @@
-import {useState, useEffect} from 'react';
+import {useState, useEffect, useRef } from 'react';
+import useEffectDelay from '../useEffectDelay.js';
 import './LandingCarousel.css';
 import '../colors-and-fonts.css';
 import CarouselItem from "./CarouselItem.jsx";
 
+/**
+ * The main recommendation carousel on the landing page
+ * @param {*} props // Accepts the json file
+ * @returns 
+ */
 const LandingCarousel = (props) => {
-    const [slide, setSlide] = useState(0);
-    const [slideCount, setSlideCount] = useState(0);  // Handles the autoscroll
-
+    const [slide, setSlide] = useState(0); // Handles the slide state
     const slideInterval = 10000;
 
+    /**
+     * Moves to the next slide
+     */
     const nextSlide = () => {
         setSlide(slide === props.data.length - 1 ? 0 : slide + 1);
     }
 
+    /**
+     * Moves to the previous slide
+     */
     const prevSlide = () => {
         setSlide(slide === 0 ? props.data.length - 1 : slide - 1);
     }
 
-    useEffect(() => {
-        setTimeout(() => setSlideCount(slideCount + 1), slideInterval);
-        nextSlide();
-    }, [slideCount]);
+    useEffectDelay(nextSlide, slideInterval);
     
     return (
         <div className="LandingCarousel">
