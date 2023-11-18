@@ -12,7 +12,7 @@ import ClockImage from '../images/clock.png';
  * @returns 
  */
 const CarouselItem = (props) => {
-    const tagItems = props.info.tags.map((tagName) => <li>{tagName}</li>);
+    const tagItems = props.info.tags.map((tagName, idx) => <li key={idx}>{tagName}</li>);
 
     return (
         <div className="CarouselItem">
