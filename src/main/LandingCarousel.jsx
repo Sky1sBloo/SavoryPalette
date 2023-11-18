@@ -7,7 +7,7 @@ const LandingCarousel = (props) => {
     const [slide, setSlide] = useState(0);
     const [slideCount, setSlideCount] = useState(0);  // Handles the autoscroll
 
-    const slideInterval = 5000;
+    const slideInterval = 10000;
 
     const nextSlide = () => {
         setSlide(slide === props.data.length - 1 ? 0 : slide + 1);
@@ -18,7 +18,7 @@ const LandingCarousel = (props) => {
     }
 
     useEffect(() => {
-        const timer = setTimeout(() => setSlideCount(slideCount + 1), slideInterval);
+        setTimeout(() => setSlideCount(slideCount + 1), slideInterval);
         nextSlide();
     }, [slideCount]);
     

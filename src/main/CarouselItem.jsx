@@ -1,9 +1,6 @@
 import './CarouselItem.css'
 import '../colors-and-fonts.css';
-import TestImage from '../images/omelette.webp';
 import ClockImage from '../images/clock.png';
-
-
 
 /**
  * 
@@ -13,10 +10,11 @@ import ClockImage from '../images/clock.png';
  */
 const CarouselItem = (props) => {
     const tagItems = props.info.tags.map((tagName, idx) => <li key={idx}>{tagName}</li>);
-
+    console.log(props.info.cardColor);
+    
     return (
-        <div className="CarouselItem">
-            <img className="carousel-image" src={TestImage} alt=""/>
+        <div className="CarouselItem" style={{backgroundColor: props.info.cardColor}}>
+            <img className="carousel-image" src={props.info.image} alt=""/>
             <div className="carousel-info">
                 <div>
                     <h1>{props.info.title}</h1>
@@ -27,7 +25,7 @@ const CarouselItem = (props) => {
                 </div>
                 <div className="carousel-time-difficulty">
                     <div className="carousel-time">
-                        <img src={ClockImage} alt=""/>
+                        <img src={ClockImage} alt="" />
                         <p>{props.info.time}</p>
                     </div>
                     <div className="carousel-difficulty">

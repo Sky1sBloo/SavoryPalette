@@ -2,6 +2,8 @@
     "CarouselItems": [
         {
             "title":"Omelette", 
+            "image":"./data-img/omelette.webp",
+            "cardColor": "var(--color-yellow)",
             "description": "like omelette", 
             "tags": ["Breakfast", "Fast"], 
             "time": "10m",
@@ -9,6 +11,8 @@
         },
         {
             "title":"Chicken", 
+            "image":"./data-img/roasted-chicken.webp",
+            "cardColor": "var(--color-green)",
             "description": "like chicken", 
             "tags": ["Breakfast", "Fast"], 
             "time": "10m",
